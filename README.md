@@ -35,3 +35,17 @@ The app will prompt for name, department, price and quantity. Then add the new i
 \*MySQL
 
 ## Screenshots
+
+customer view
+![alt text](images/cust-view1.PNG 'screenshot')
+![alt text](images/cust-view2.PNG 'screenshot')
+
+manager view inventory
+![alt text](images/view-inv.PNG 'screenshot')
+
+manager low inventory/add inventory
+![alt text](images/low-add-inv.PNG 'screenshot')
+
+manager add product
+![alt text](images/add-product.PNG 'screenshot')
+![alt text](images/add-product2.PNG 'screenshot')

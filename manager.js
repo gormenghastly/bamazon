@@ -116,27 +116,27 @@ var addTo = function() {
 
       connection.query(query, answer.addProduct, function(err, res) {
         console.log('Product located.');
-      });
-    });
-  inquirer
-    .prompt({
-      type: 'input',
-      name: 'amount',
-      message: 'How many would you like to add to the inventory?',
-      validate: function(value) {
-        if (isNaN(value) == false) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    })
-    .then(function(answer) {
-      var query = 'UPDATE products SET stock_quantity= ?';
+        inquirer
+          .prompt({
+            type: 'input',
+            name: 'amount',
+            message: 'How many would you like to add to the inventory?',
+            validate: function(value) {
+              if (isNaN(value) == false) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+          })
+          .then(function(answer) {
+            var query = 'UPDATE products SET stock_quantity= ?';
 
-      answer.addProduct;
-      connection.query(query, function(err, res) {
-        console.log('Quantity Added.');
+            answer.addProduct;
+            connection.query(query, function(err, res) {
+              console.log('Quantity Added.');
+            });
+          });
       });
     });
 };

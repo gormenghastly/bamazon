@@ -79,7 +79,7 @@ var buyItem = function() {
         var stock = res[0].stock_quantity;
         if (order <= stock) {
           var amount = order * res[0].price;
-          console.log('Your total is $' + amount);
+          console.log('Your total is $' + amount + '\n');
         } else {
           console.log('Sorry that quantity not available.');
         }
